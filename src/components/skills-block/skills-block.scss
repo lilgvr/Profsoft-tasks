@@ -1,0 +1,44 @@
+@use "src/variables" as v;
+
+.skills-block--ctr {
+	width: v.$block-width;
+	.skills-block {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: row;
+		margin: 5vw 0;
+	}
+
+	p:first-of-type {
+		font-weight: 700;
+		font-size: 2vw;
+		user-select: none;
+	}
+
+	&> p {
+		text-align: center;
+		font-size: 1.25vw;
+		margin: 5vw 0;
+	}
+
+	.skills-block__item {
+		font-weight: 700;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 50%;
+		p{
+			font-size: .75vw;
+			color: v.$secondary-color;
+			word-wrap: break-word;
+			width: 40%;
+			text-align: center;
+		}
+
+		.star{
+			margin: 1vw .5vw;
+		}
+	}
+}

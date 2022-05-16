@@ -1,0 +1,28 @@
+@use 'src/variables' as v;
+
+.portfolio-block--ctr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	background-color: v.$background-color;
+
+	& > p {
+		font-weight: 700;
+		font-size: 2vw;
+		user-select: none;
+	}
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 2vw 0;
+		p{
+			text-decoration: underline;
+			margin: 2vw 0;
+		}
+	}
+}

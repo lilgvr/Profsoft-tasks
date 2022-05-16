@@ -1,0 +1,23 @@
+@use '../../variables' as v;
+
+header {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	height: 5vw;
+	border-bottom: .125vw solid v.$secondary-color;
+	color: v.$secondary-color;
+	width: v.$block-width;
+	font-family: Gilroy Bold, sans-serif;
+}
+
+.header-item {
+	font-size: 1.25vw;
+	transition: color .1s linear;
+}
+
+.header-item:hover {
+	color: v.$primary-color;
+	cursor: pointer;
+}

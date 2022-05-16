@@ -1,0 +1,57 @@
+@use '../../variables' as v;
+
+.home-block--ctr {
+	width: v.$block-width;
+	height: auto;
+	font-family: "Gilroy Bold", sans-serif;
+	user-select: none;
+
+	.home-block__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+
+		.home-block__title {
+			font-size: 3vw;
+			word-wrap: break-word;
+			width: fit-content;
+		}
+
+		.home-block__desc {
+			font-family: "Gilroy Medium", sans-serif;
+			font-size: 1.25vw;
+		}
+	}
+
+	.home-block__lang {
+		transform: rotate(-90deg);
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex-direction: row;
+		color: v.$secondary-color;
+		font-size: 1.25vw;
+
+		p {
+			margin: 0;
+		}
+
+		p:not(.lang-line):hover {
+			cursor: pointer;
+		}
+
+		.lang-line {
+			color: v.$primary-color;
+		}
+	}
+
+	.lang-selected {
+		color: v.$primary-color;
+	}
+
+	img {
+		//width: 100%;
+		//height: auto;
+	}
+}

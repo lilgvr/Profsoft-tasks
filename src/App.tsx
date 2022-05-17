@@ -14,14 +14,13 @@ import HomeBlockMobile from "./components/home-block/mobile/HomeBlockMobile";
 
 function App() {
     const [menuOpened, setMenuOpened] = useState(false);
-    const contextValue = {menuOpened, setMenuOpened};
 
     return (
         <div className="container">
             <Media queries={{
                 desktopOrLaptop: '(min-width: 1224px)',
                 tabletOrMobile: '(max-width: 1224px)',
-                bigScreen: '(max-width: 1824px)'
+                // bigScreen: '(min-width: 1824px)'
             }}>
                 {matches => (
                     <Fragment>
@@ -33,7 +32,7 @@ function App() {
                             <PortfolioBlock/>
                             <ContactsBlock/>
                         </Fragment>}
-                        {matches.tabletOrMobile && <MenuContext.Provider value={contextValue}>
+                        {matches.tabletOrMobile && <MenuContext.Provider value={{menuOpened, setMenuOpened}}>
                             {menuOpened ? (
                                 <Menu/>
                             ) : (

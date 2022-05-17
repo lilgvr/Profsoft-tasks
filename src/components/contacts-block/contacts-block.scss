@@ -33,6 +33,7 @@
 	& > p:last-of-type {
 		color: v.$secondary-color;
 		font-size: 1vw;
+		margin-bottom: 10%;
 
 		@media screen and (max-width: 1224px) {
 			font-size: 4.8vw;

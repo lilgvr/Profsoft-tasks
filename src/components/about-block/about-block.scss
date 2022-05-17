@@ -40,4 +40,14 @@
 			width: 80%;
 		}
 	}
+
+	p:last-of-type{
+		color: v.$secondary-color;
+		font-size: 1vw;
+		user-select: none;
+
+		@media screen and (max-width: 1224px) {
+			font-size: 4.8vw;
+		}
+	}
 }

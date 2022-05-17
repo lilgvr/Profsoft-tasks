@@ -1,12 +1,21 @@
-import React, {FC, Fragment, useState} from 'react';
+import React, {FC, Fragment, useEffect, useState} from 'react';
+import {formatTime} from "../../service/functions";
 import "./about-block.scss";
 
 const AboutBlock: FC = () => {
     const [isRussian, setIsRussian] = useState(false);
+    const [updateTime, setUpdateTime] = useState(Date.now());
 
     const handleClick = () => {
         setIsRussian(!isRussian);
     }
+
+    useEffect(() => {
+        const intervalCallback = () => setUpdateTime(Date.now());
+        const timer = setInterval(intervalCallback, 60000);
+
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <div className="about-block">
@@ -24,6 +33,7 @@ const AboutBlock: FC = () => {
                         <br/>
                         с замечательными людьми
                     </p>
+                    <p>Обновлено: {formatTime(updateTime)}</p>
                 </Fragment> :
                 <Fragment>
                     <p onClick={handleClick} title="Change block language to Russian">About me</p>
@@ -38,6 +48,7 @@ const AboutBlock: FC = () => {
                         <br/>
                         with wonderful people.
                     </p>
+                    <p>Updated: {formatTime(updateTime)}</p>
                 </Fragment>
             }
         </div>

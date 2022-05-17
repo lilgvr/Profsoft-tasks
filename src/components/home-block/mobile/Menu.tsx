@@ -19,7 +19,7 @@ const Menu: FC = () => {
             <MenuItem title='Skills' scrollEl=''/>
             <MenuItem title='Portfolio' scrollEl=''/>
             <MenuItem title='Contacts' scrollEl=''/>
-            <LanguageBtn/>
+            <LanguageBtn/> {/*FIXME положение*/}
         </div>
     );
 };

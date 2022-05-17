@@ -1,0 +1,63 @@
+@use "src/variables" as v;
+
+.contacts-block {
+	$transition: 0.2s linear;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	width: v.$block-width;
+
+	& > p:first-of-type {
+		font-weight: 700;
+		font-size: 2vw;
+		user-select: none;
+	}
+
+	& > p {
+		font-size: 1.25vw;
+	}
+
+	& > p:last-of-type {
+		color: v.$secondary-color;
+		font-size: 1vw;
+	}
+
+	.contacts-block__media {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		width: 30%;
+		margin: 5vw 0 2vw 0;
+
+		img {
+			cursor: pointer;
+			transition: filter $transition;
+			&:hover{
+				filter: invert(50%);
+			}
+		}
+	}
+
+	.contacts-block__btn {
+		background-color: v.$primary-color;
+		color: #fff;
+		border-radius: 40px;
+		padding: 0 30px;
+		width: 15%;
+		height: 10%;
+		transition: background-color $transition, color $transition;
+
+		p {
+			font-size: 1vw;
+			font-weight: 700;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: v.$secondary-color;
+		}
+	}
+}

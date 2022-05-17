@@ -8,7 +8,7 @@ const Header: FC = () => {
             <HeaderItem title="About me" scrollEl="about-block"/>
             <HeaderItem title="Skills" scrollEl="skills-block--ctr"/>
             <HeaderItem title="Portfolio" scrollEl="portfolio-block--ctr"/>
-            <HeaderItem title="Contacts" scrollEl=""/>
+            <HeaderItem title="Contacts" scrollEl="contacts-block"/>
         </header>
     );
 };

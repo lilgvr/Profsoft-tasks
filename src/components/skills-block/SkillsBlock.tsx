@@ -43,22 +43,22 @@ const Skill: FC<{ skill: ISkill }> = ({skill}) => {
         <div className="skills-block__item">
             <img src={img} alt={title} height="100px" width="auto"/>
             <p>{title}</p>
-            <Stars count={stars}/>
+            <Stars count={stars} skillId={skill.id}/>
         </div>
     );
 }
 
-const Stars: FC<{ count: number }> = ({count}) => {
+const Stars: FC<{ count: number, skillId: number }> = ({count, skillId}) => {
     const prepare = useCallback(() => {
         const res: ReactNode[] = [];
 
         for (let i = 0; i < count; i++) {
-            res.push(<img src={star} alt="star" className="star"/>);
+            res.push(<img src={star} alt="star" className="star" key={skillId + i}/>);
         }
 
         if (res.length < 5) {
             for (let i = res.length; i < 5; i++) {
-                res.push(<img src={starGray} alt="grey star" className="star"/>)
+                res.push(<img src={starGray} alt="grey star" className="star" key={skillId + i}/>)
             }
         }
 

@@ -20,15 +20,17 @@
 	font-style: normal;
 }
 
-html, body {
-	scroll-behavior: smooth;
-	width: 100%;
-}
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-body {
-	margin: 0;
-	font-family: "Gilroy Medium", sans-serif;
-	color: v.$primary-color;
+	body {
+		scroll-behavior: smooth;
+		width: 100%;
+		margin: 0;
+		font-family: "Gilroy Medium", sans-serif;
+		color: v.$primary-color;
+	}
 }
 
 .container {

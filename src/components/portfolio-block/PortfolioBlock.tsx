@@ -23,7 +23,7 @@ const PortfolioBlock: FC = () => {
     return (
         <div className="portfolio-block--ctr">
             <p>Portfolio</p>
-            {items.map(el => <PortfolioItem img={el.img} title={el.title}/>)}
+            {items.map(el => <PortfolioItem img={el.img} title={el.title} key={el.id}/>)}
         </div>
     );
 };

@@ -9,7 +9,7 @@ const HomeBlock: FC = () => {
             <div className="home-block__info">
                 <p className="home-block__title">Denis<br/>Novik</p>
                 <p className="home-block__desc">UX | UI Designer <br/> 24 years old, Minsk </p>
-                <LanguageBtn/>
+                <LanguageBtn/> {/*// FIXME отступ*/}
             </div>
 
             <img src={man} alt="Denis Novik" height="auto" width="100%"/>

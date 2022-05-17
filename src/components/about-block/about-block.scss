@@ -1,6 +1,10 @@
 @use "src/variables" as v;
 
 .about-block {
+	@media screen and (max-width: 1224px) {
+
+	}
+
 	height: auto;
 	margin-top: 5vw;
 	padding: 3vw 0;
@@ -17,6 +21,10 @@
 		font-size: 2vw;
 		user-select: none;
 
+		@media screen and (max-width: 1224px) {
+			font-size: 9vw;
+		}
+
 		&:hover {
 			cursor: pointer;
 		}
@@ -26,5 +34,10 @@
 		width: 50%;
 		text-align: center;
 		font-size: 1.25vw;
+
+		@media screen and (max-width: 1224px) {
+			font-size: 4.8vw;
+			width: 80%;
+		}
 	}
 }

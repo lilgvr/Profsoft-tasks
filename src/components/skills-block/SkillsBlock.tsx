@@ -41,7 +41,7 @@ const Skill: FC<{ skill: ISkill }> = ({skill}) => {
 
     return (
         <div className="skills-block__item">
-            <img src={img} alt={title} height="100px" width="auto"/>
+            <img src={img} alt={title} />
             <p>{title}</p>
             <Stars count={stars} skillId={skill.id}/>
         </div>
@@ -62,9 +62,8 @@ const Stars: FC<{ count: number, skillId: number }> = ({count, skillId}) => {
             }
         }
 
-
         return res;
-    }, [count]);
+    }, [count, skillId]);
 
     const stars: ReactNode[] = useMemo(prepare, [prepare]);
 

@@ -8,18 +8,30 @@
 		align-items: center;
 		flex-direction: row;
 		margin: 5vw 0;
+
+		@media screen and (max-width: 1224px) {
+			width: 100%;
+			flex-direction: column;
+		}
 	}
 
 	p:first-of-type {
 		font-weight: 700;
 		font-size: 2vw;
 		user-select: none;
+		@media screen and (max-width: 1224px) {
+			font-size: 9vw;
+		}
 	}
 
 	&> p {
 		text-align: center;
 		font-size: 1.25vw;
 		margin: 5vw 0;
+		@media screen and (max-width: 1224px) {
+			font-size: 4.8vw;
+			margin: 10vw 0;
+		}
 	}
 
 	.skills-block__item {
@@ -35,10 +47,30 @@
 			word-wrap: break-word;
 			width: 40%;
 			text-align: center;
+
+			@media screen and (max-width: 1224px) {
+				font-size: 3.75vw;
+				width: 80%;
+			}
 		}
 
 		.star{
 			margin: 1vw .5vw;
+
+			@media screen and (max-width: 1224px) {
+				height: 5vw;
+				margin: 6vw 2vw;
+			}
+		}
+
+		&>img{
+			height: 100px;
+			width: auto;
+
+			@media screen and (max-width: 1224px) {
+				height: 24vw;
+				margin: 4vw 0;
+			}
 		}
 	}
 }

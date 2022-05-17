@@ -12,19 +12,40 @@
 		align-items: center;
 		flex-direction: row;
 
+		@media screen and (max-width: 1224px) {
+			width: 100%;
+			flex-direction: column;
+		}
+
 		.home-block__title {
 			font-size: 3vw;
 			word-wrap: break-word;
 			width: fit-content;
+
+			@media screen and (max-width: 1224px) {
+				font-size: 12.5vw;
+				align-self: flex-start;
+				margin: 10% 0 5% 0;
+			}
 		}
 
 		.home-block__desc {
 			font-family: "Gilroy Medium", sans-serif;
 			font-size: 1.25vw;
+
+			@media screen and (max-width: 1224px) {
+				font-size: 4.8vw;
+				align-self: flex-start;
+				margin: 0 0 15% 0;
+			}
 		}
 	}
 
 	.home-block__lang {
+		@media screen and (max-width: 1224px) {
+
+		}
+
 		transform: rotate(-90deg);
 		display: flex;
 		justify-content: flex-end;
@@ -52,7 +73,65 @@
 	}
 
 	img {
-		//width: 100%;
-		//height: auto;
+		@media screen and (max-width: 1224px) {
+			width: 80%;
+		}
+	}
+
+	@media screen and (max-width: 1224px) {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		& > div {
+			width: 80%;
+			height: 80%;
+			margin-top: 10%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			img {
+				height: 25px;
+				width: auto;
+				align-self: flex-start;
+				justify-self: flex-end;
+				margin-top: 15%;
+			}
+		}
 	}
 }
+
+.home-block--menu {
+	width: 80%;
+	height: 90%;
+	margin: 10% 0 0 0;
+	font-family: "Gilroy Bold", sans-serif;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+
+	div{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	p{
+		font-size: 9vw;
+		color: v.$secondary-color;
+		margin: 6vw 0;
+
+		&.selected{
+			color: v.$primary-color;
+		}
+	}
+}
+
+

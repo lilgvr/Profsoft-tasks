@@ -1,6 +1,10 @@
 @use "src/variables" as v;
 
 .contacts-block {
+	@media screen and (max-width: 1224px) {
+		width: 100%;
+	}
+
 	$transition: 0.2s linear;
 	display: flex;
 	justify-content: center;
@@ -13,18 +17,34 @@
 		font-weight: 700;
 		font-size: 2vw;
 		user-select: none;
+		@media screen and (max-width: 1224px) {
+			font-size: 9vw;
+			margin-top: 14vw;
+		}
 	}
 
 	& > p {
 		font-size: 1.25vw;
+		@media screen and (max-width: 1224px) {
+			font-size: 4.8vw;
+		}
 	}
 
 	& > p:last-of-type {
 		color: v.$secondary-color;
 		font-size: 1vw;
+
+		@media screen and (max-width: 1224px) {
+			font-size: 4.8vw;
+			margin: 14vw 0 28vw 0;
+		}
 	}
 
 	.contacts-block__media {
+		@media screen and (max-width: 1224px) {
+			width: 80%;
+		}
+
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -42,17 +62,26 @@
 	}
 
 	.contacts-block__btn {
+		@media screen and (max-width: 1224px) {
+			width: 75%;
+			margin: 8vw 0;
+		}
+
 		background-color: v.$primary-color;
 		color: #fff;
 		border-radius: 40px;
-		padding: 0 30px;
+		padding: 15px 30px;
 		width: 15%;
 		height: 10%;
 		transition: background-color $transition, color $transition;
 
 		p {
+			margin: 0;
 			font-size: 1vw;
 			font-weight: 700;
+			@media screen and (max-width: 1224px) {
+				font-size: 4.8vw;
+			}
 		}
 
 		&:hover {

@@ -4,7 +4,7 @@ import "./header.scss";
 const Header: FC = () => {
     return (
         <header>
-            <HeaderItem title="Home" scrollEl="home-block--ctr  "/>
+            <HeaderItem title="Home" scrollEl="home-block--ctr"/>
             <HeaderItem title="About me" scrollEl="about-block"/>
             <HeaderItem title="Skills" scrollEl="skills-block--ctr"/>
             <HeaderItem title="Portfolio" scrollEl="portfolio-block--ctr"/>

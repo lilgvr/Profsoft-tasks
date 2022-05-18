@@ -19,9 +19,9 @@ const SkillsBlock: FC = () => {
     const idGenerator = infiniteGenerator();
 
     const skills: ISkill[] = [
-        {id: idGenerator.next().value, img: ps, title: "Adobe Photoshop", stars: 4},
-        {id: idGenerator.next().value, img: ai, title: "Adobe Illustrator", stars: 3},
-        {id: idGenerator.next().value, img: ae, title: "Adobe After Effects", stars: 4},
+        {id: idGenerator.next().value, img: ps, title: `Adobe<br/>Photoshop`, stars: 4},
+        {id: idGenerator.next().value, img: ai, title: `Adobe<br/>Illustrator`, stars: 3},
+        {id: idGenerator.next().value, img: ae, title: `Adobe<br/>After Effects`, stars: 4},
         {id: idGenerator.next().value, img: figma, title: "Figma", stars: 4},
     ]
 
@@ -37,13 +37,13 @@ const SkillsBlock: FC = () => {
 };
 
 const Skill: FC<{ skill: ISkill }> = ({skill}) => {
-    const {img, title, stars} = skill;
+    const {id, img, title, stars} = skill;
 
     return (
         <div className="skills-block__item">
-            <img src={img} alt={title} />
-            <p>{title}</p>
-            <Stars count={stars} skillId={skill.id}/>
+            <img src={img} alt={title}/>
+            <p dangerouslySetInnerHTML={{__html: title}}></p>
+            <Stars count={stars} skillId={id}/>
         </div>
     );
 }
@@ -58,7 +58,7 @@ const Stars: FC<{ count: number, skillId: number }> = ({count, skillId}) => {
 
         if (res.length < 5) {
             for (let i = res.length; i < 5; i++) {
-                res.push(<img src={starGray} alt="grey star" className="star" key={skillId + i}/>)
+                res.push(<img src={starGray} alt="grey star" className="star" key={skillId + (2 * i)}/>)
             }
         }
 

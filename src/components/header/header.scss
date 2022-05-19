@@ -11,7 +11,7 @@ header {
 	width: v.$block-width;
 	font-family: Gilroy Bold, sans-serif;
 
-	&:hover {
+	/*&:hover {
 		.header-item:first-of-type {
 			color: v.$secondary-color;
 		}
@@ -19,15 +19,15 @@ header {
 		.header-item:first-of-type:hover {
 			color: v.$primary-color;
 		}
-	}
+	}*/
 
 	.header-item {
 		font-size: 1.25vw;
-		transition: color .1s linear;
+		transition: color .2s linear;
 
-		&:first-of-type {
+		/*&:first-of-type {
 			color: v.$primary-color;
-		}
+		}*/
 
 		&:hover {
 			color: v.$primary-color;

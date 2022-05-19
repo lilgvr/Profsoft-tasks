@@ -10,19 +10,19 @@ header {
 	color: v.$secondary-color;
 	width: v.$block-width;
 	font-family: Gilroy Bold, sans-serif;
-}
 
-.header-item {
-	font-size: 1.25vw;
-	transition: color .1s linear;
+	.header-item {
+		font-size: 1.25vw;
+		transition: color .1s linear;
 
-	&.selected {
-		color: v.$primary-color;
-		transition-delay: .2s;
+		&:hover {
+			color: v.$primary-color;
+			cursor: pointer;
+		}
+
+		&.selected {
+			color: v.$primary-color;
+			transition-delay: .1s;
+		}
 	}
-}
-
-.header-item:hover {
-	color: v.$primary-color;
-	cursor: pointer;
 }

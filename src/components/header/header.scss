@@ -5,7 +5,7 @@ header {
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
-	height: 5vw;
+	height: 6vw;
 	border-bottom: .125vw solid v.$secondary-color;
 	color: v.$secondary-color;
 	width: v.$block-width;
@@ -15,6 +15,11 @@ header {
 .header-item {
 	font-size: 1.25vw;
 	transition: color .1s linear;
+
+	&.selected {
+		color: v.$primary-color;
+		transition-delay: .2s;
+	}
 }
 
 .header-item:hover {

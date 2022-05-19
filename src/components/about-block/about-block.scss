@@ -1,13 +1,9 @@
 @use "src/variables" as v;
 
 .about-block {
-	@media screen and (max-width: 1224px) {
-
-	}
-
 	height: auto;
 	margin-top: 5vw;
-	padding: 3vw 0;
+	padding: 5vw 0;
 	width: 100%;
 	position: relative;
 	background-color: v.$background-color;

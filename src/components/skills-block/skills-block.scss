@@ -2,12 +2,13 @@
 
 .skills-block--ctr {
 	width: v.$block-width;
+
 	.skills-block {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		flex-direction: row;
-		margin: 5vw 0;
+		margin: 10% 0;
 
 		@media screen and (max-width: 1224px) {
 			width: 100%;
@@ -24,10 +25,10 @@
 		}
 	}
 
-	&> p {
+	& > p {
 		text-align: center;
 		font-size: 1.25vw;
-		margin: 5vw 0;
+		margin: 10% 0;
 		@media screen and (max-width: 1224px) {
 			font-size: 4.8vw;
 			margin: 10vw 0;
@@ -41,7 +42,8 @@
 		align-items: center;
 		flex-direction: column;
 		height: 50%;
-		p{
+
+		p {
 			font-size: .75vw;
 			color: v.$secondary-color;
 			word-wrap: break-word;
@@ -54,7 +56,7 @@
 			}
 		}
 
-		.star{
+		.star {
 			margin: 1vw .5vw;
 
 			@media screen and (max-width: 1224px) {
@@ -63,7 +65,7 @@
 			}
 		}
 
-		&>img{
+		& > img {
 			height: 100px;
 			width: auto;
 

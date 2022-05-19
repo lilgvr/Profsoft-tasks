@@ -27,7 +27,7 @@ const AboutBlock: FC = () => {
                         <br/>
                         Мне интересен дизайн и всё, что с ним связано
                     </p>
-                    <p>Я прохожу курсы "Дизайн мобильных и веб- интерфейсов" в IT-академии</p>
+                    <p>Я прохожу курсы "Дизайн мобильных <br/> и веб-интерфейсов" в IT-академии</p>
                     <p>
                         Я готов реализовать отличные проекты
                         <br/>
@@ -42,7 +42,7 @@ const AboutBlock: FC = () => {
                         <br/>
                         I'm interested in design and everything connected with it.
                     </p>
-                    <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+                    <p>I'm studying at courses "Web and mobile design <br/> interfaces" in IT-Academy.</p>
                     <p>
                         Ready to implement excellent projects
                         <br/>

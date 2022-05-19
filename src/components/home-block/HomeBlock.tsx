@@ -18,7 +18,7 @@ const HomeBlock: FC = () => {
 };
 
 const LanguageBtn: FC = () => {
-    const [selectedRU, setSelectedRU] = useState(true);
+    const [selectedRU, setSelectedRU] = useState(false);
 
     const handleClick = () => {
         setSelectedRU(!selectedRU);

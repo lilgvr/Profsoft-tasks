@@ -1,5 +1,4 @@
 import React, {Fragment, useCallback, useEffect, useState} from 'react';
-import './App.css';
 import Header from "./components/header/Header";
 import HomeBlock from "./components/home-block/HomeBlock";
 import AboutBlock from "./components/about-block/AboutBlock";

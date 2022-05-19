@@ -14,10 +14,10 @@ header {
 	&:hover {
 		.header-item:first-of-type {
 			color: v.$secondary-color;
-		}
 
-		.header-item:first-of-type:hover {
-			color: v.$primary-color;
+			&:hover {
+				color: v.$primary-color;
+			}
 		}
 	}
 

@@ -44,7 +44,8 @@
 	}
 
 	.home-block__lang {
-		transform: rotate(-90deg) translate(0, 1.75vw);
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
@@ -114,7 +115,7 @@
 	align-items: flex-start;
 	flex-direction: column;
 
-	div{
+	div {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -122,23 +123,24 @@
 		width: 100%;
 	}
 
-	p{
+	p {
 		font-size: 9vw;
 		color: v.$secondary-color;
 		margin: 6vw 0;
 
-		&.selected{
+		&.selected {
 			color: v.$primary-color;
 		}
 	}
 
-	.home-block__lang{
-		transform: rotate(90deg) translate(5vw, -9vw);
+	.home-block__lang {
+		writing-mode: vertical-rl;
+		transform: rotate(180deg) translate(-11vw, 0);
 		transform-origin: bottom;
 		width: 40%;
 		align-self: flex-end;
 
-		p{
+		p {
 			margin: 0;
 		}
 	}

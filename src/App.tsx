@@ -37,7 +37,7 @@ function App() {
 
         if (response) {
             setRequestContent(response);
-            console.log(response);
+            console.log(`Результат запроса к \n${url}: `, response);
         }
     }, []);
 

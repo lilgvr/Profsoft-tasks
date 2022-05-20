@@ -73,6 +73,11 @@
 				height: 24vw;
 				margin: 4vw 0;
 			}
+
+			@media screen and (max-width: 1900px) {
+				height: 96px;
+				margin: 2vw;
+			}
 		}
 	}
 }

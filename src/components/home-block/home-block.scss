@@ -60,6 +60,14 @@
 		p:not(.lang-line):hover {
 			cursor: pointer;
 		}
+
+		.lang-selected {
+			color: v.$primary-color;
+		}
+
+		.lang-line {
+			color: v.$primary-color;
+		}
 	}
 
 	img {
@@ -96,14 +104,6 @@
 	}
 }
 
-.lang-selected {
-	color: v.$primary-color;
-}
-
-.lang-line {
-	color: v.$primary-color;
-}
-
 .home-block--menu {
 	width: 80%;
 	height: 90%;
@@ -129,6 +129,12 @@
 		margin: 6vw 0;
 
 		&.selected {
+			color: v.$primary-color;
+		}
+		&.lang-selected {
+			color: v.$primary-color;
+		}
+		&.lang-line {
 			color: v.$primary-color;
 		}
 	}

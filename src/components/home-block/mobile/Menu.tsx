@@ -38,17 +38,21 @@ const MenuItem: FC<{ title: string, scrollEl: string, selected?: boolean }> = ({
 }
 
 const LanguageBtn: FC = () => {
-    const [selectedRU, setSelectedRU] = useState(true);
+    const [selectedRU, setSelectedRU] = useState(false);
 
-    const handleClick = () => {
-        setSelectedRU(!selectedRU);
+    const handleClickEN = () => {
+        setSelectedRU(false);
+    }
+
+    const handleClickRU = () => {
+        setSelectedRU(true);
     }
 
     return (
         <div className="home-block__lang">
-            <p className={selectedRU ? 'lang-selected' : ''} onClick={handleClick}>RU</p>
+            <p className={selectedRU ? 'lang-selected' : ''} onClick={handleClickRU}>RU</p>
             <p className="lang-line">&nbsp;|&nbsp;</p>
-            <p className={!selectedRU ? 'lang-selected' : ''} onClick={handleClick}>ENG</p>
+            <p className={!selectedRU ? 'lang-selected' : ''} onClick={handleClickEN}>ENG</p>
         </div>
     );
 }

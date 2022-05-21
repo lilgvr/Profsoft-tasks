@@ -1,5 +1,5 @@
-import React, {FC, Fragment, useContext, useState} from 'react';
-import man2 from "../../../assets/images/png/man2.png";
+import React, {FC, Fragment, useContext} from 'react';
+import photo from "../../../assets/images/png/photo2.png";
 import burger from "../../../assets/images/svg/burger.svg";
 import MenuContext from "../../../service/MenuContext";
 import "../home-block.scss";
@@ -22,7 +22,7 @@ const HomeBlockMobile: FC = () => {
                     <img src={burger} alt="Menu" onClick={handleClick}/>
                 </div>
 
-                <img src={man2} alt="Denis Novik" height="auto" width="100%"/>
+                <img src={photo} alt="Denis Novik" height="auto" width="100%"/>
             </div>
         </Fragment>
     );

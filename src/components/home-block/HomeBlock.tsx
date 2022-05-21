@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import "./home-block.scss";
-import man from "src/assets/images/png/man.png";
+import photo from "src/assets/images/png/photo.png";
 
 const HomeBlock: FC = () => {
     return (
@@ -12,7 +12,7 @@ const HomeBlock: FC = () => {
                 <LanguageBtn/>
             </div>
 
-            <img src={man} alt="Denis Novik" height="auto" width="100%"/>
+            <img src={photo} alt="Denis Novik" height="auto" width="100%"/>
         </div>
     );
 };

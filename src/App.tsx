@@ -1,4 +1,4 @@
-import React, {Fragment, useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import Header from "./components/header/Header";
 import AboutBlock from "./components/about-block/AboutBlock";
 import SkillsBlock from "./components/skills-block/SkillsBlock";
@@ -42,23 +42,25 @@ function App() {
     }, [fetchPost]);
 
     return (
-        <div className="container">
+        <>
             <Media queries={{
                 desktopOrLaptop: '(min-width: 1224px)',
                 tabletOrMobile: '(max-width: 1224px)',
             }}>
                 {matches => (
-                    <Fragment>
+                    <>
                         {matches.desktopOrLaptop && <Header/>}
                         {matches.tabletOrMobile && <HeaderMobile/>}
-                        <AboutBlock/>
-                        <SkillsBlock/>
-                        <PortfolioBlock/>
+                        <main>
+                            <AboutBlock/>
+                            <SkillsBlock/>
+                            <PortfolioBlock/>
+                        </main>
                         <ContactsBlock/>
-                    </Fragment>
+                    </>
                 )}
             </Media>
-        </div>
+        </>
     );
 }
 

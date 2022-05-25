@@ -1,4 +1,4 @@
-import React, {FC, Fragment, useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {formatTime} from "../../service/functions";
 import "./about-block.scss";
 
@@ -20,7 +20,7 @@ const AboutBlock: FC = () => {
     return (
         <section className="about">
             {isRussian ?
-                <Fragment>
+                <>
                     <p onClick={handleClick} title="Сменить язык раздела на английский">Обо мне</p>
                     <p>
                         Привет, Я Денис - UX/UI дизайнер из Минска
@@ -34,8 +34,8 @@ const AboutBlock: FC = () => {
                         с замечательными людьми
                     </p>
                     <p>Обновлено: {formatTime(updateTime)}</p>
-                </Fragment> :
-                <Fragment>
+                </> :
+                <>
                     <p onClick={handleClick} title="Change block language to Russian">About me</p>
                     <p>
                         Hi, I'm Denis – UX/UI designer from Minsk.
@@ -49,7 +49,7 @@ const AboutBlock: FC = () => {
                         with wonderful people.
                     </p>
                     <p>Updated: {formatTime(updateTime)}</p>
-                </Fragment>
+                </>
             }
         </section>
     );

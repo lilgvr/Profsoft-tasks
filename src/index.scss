@@ -32,12 +32,16 @@ html {
 		color: v.$primary-color;
 		-webkit-tap-highlight-color: transparent;
 	}
-}
 
-.container {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-direction: column;
-	height: 100%;
+	#root, main {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	main {
+		width: 100%;
+	}
 }

@@ -1,4 +1,4 @@
-import React, {FC, useContext, useState} from 'react';
+import React, {FC, useContext} from 'react';
 import close from "../../../assets/images/svg/close.svg";
 import MenuContext from "../../../service/MenuContext";
 import "../header.scss";

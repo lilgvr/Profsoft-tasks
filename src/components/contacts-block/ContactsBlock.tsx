@@ -9,18 +9,19 @@ import {infiniteGenerator} from "../../service/functions";
 interface IContactsMedia {
     id: number,
     img: string,
-    alt: string
+    alt: string,
+    href: string
 }
 
 const ContactsBlock: FC = () => {
     return (
-        <div className="contacts-block">
-            <p>Contacts</p>
+        <footer className="contacts-block">
+            <h1>Contacts</h1>
             <p>Want to know more or just chat?<br/>You are welcome!</p>
             <ContactsBtn/>
             <ContactsMedia/>
             <p>Like me on<br/>LinkedIn, Instagram, Behance, Dribble</p>
-        </div>
+        </footer>
     );
 };
 
@@ -30,30 +31,42 @@ const ContactsMedia: FC = () => {
         {
             id: idGenerator.next().value,
             img: linkedin,
-            alt: 'LinkedIn'
+            alt: 'LinkedIn',
+            href: 'https://linkedin.com'
         },
         {
             id: idGenerator.next().value,
             img: inst,
-            alt: 'Instagram'
+            alt: 'Instagram',
+            href: 'https://instagram.com'
         },
         {
             id: idGenerator.next().value,
             img: behance,
-            alt: 'Behance'
+            alt: 'Behance',
+            href: 'https://behance.net'
         },
         {
             id: idGenerator.next().value,
             img: dribble,
-            alt: 'Dribble'
+            alt: 'Dribbble',
+            href: 'https://dribbble.com'
         },
 
     ];
 
     return (
         <div className="contacts-block__media">
-            {media.map(el => <img src={el.img} alt={el.alt} title={el.alt} key={el.id} height="40px" width="auto"/>)}
+            {media.map(el => <MediaItem img={el.img} alt={el.alt} title={el.alt} href={el.href} key={el.id}/>)}
         </div>
+    );
+}
+
+const MediaItem: FC<{ img: string, alt: string, title: string, href: string }> = ({img, alt, href}) => {
+    return (
+        <a href={href} target="_blank" rel="noreferrer">
+            <img src={img} alt={alt} title={alt} height="40px" width="auto"/>
+        </a>
     );
 }
 

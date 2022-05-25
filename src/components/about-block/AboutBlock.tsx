@@ -18,7 +18,7 @@ const AboutBlock: FC = () => {
     }, []);
 
     return (
-        <div className="about-block">
+        <section className="about-block">
             {isRussian ?
                 <Fragment>
                     <p onClick={handleClick} title="Сменить язык раздела на английский">Обо мне</p>
@@ -51,7 +51,7 @@ const AboutBlock: FC = () => {
                     <p>Updated: {formatTime(updateTime)}</p>
                 </Fragment>
             }
-        </div>
+        </section>
     );
 };
 

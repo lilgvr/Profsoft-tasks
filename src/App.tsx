@@ -53,7 +53,7 @@ function App() {
                         {matches.desktopOrLaptop &&
                             <Fragment>
                                 <Header/>
-                                <HomeBlock/>
+                                {/*<HomeBlock/>*/}
                                 <AboutBlock/>
                                 <SkillsBlock/>
                                 <PortfolioBlock/>

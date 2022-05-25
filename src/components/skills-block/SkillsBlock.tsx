@@ -26,13 +26,13 @@ const SkillsBlock: FC = () => {
     ]
 
     return (
-        <div className="skills-block--ctr">
-            <p>Skills</p>
-            <p>I work in such programs as</p>
+        <section className="skills-block--ctr">
+            <h1>Skills</h1>
+            <h2>I work in such programs as</h2>
             <div className="skills-block">
                 {skills.map(el => <Skill skill={el} key={el.id}/>)}
             </div>
-        </div>
+        </section>
     );
 };
 

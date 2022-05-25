@@ -21,7 +21,7 @@ const PortfolioBlock: FC = () => {
     ]
 
     return (
-        <section className="portfolio-block--ctr">
+        <section className="portfolio">
             <h1>Portfolio</h1>
             {items.map(el => <PortfolioItem img={el.img} title={el.title} key={el.id}/>)}
         </section>

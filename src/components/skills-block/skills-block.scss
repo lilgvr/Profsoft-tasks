@@ -1,9 +1,9 @@
 @use "src/variables" as v;
 
-.skills-block--ctr {
+.skills {
 	width: v.$block-width;
 
-	.skills-block {
+	.skills-items {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -37,7 +37,7 @@
 		}
 	}
 
-	.skills-block__item {
+	.skills-item {
 		font-weight: 700;
 		display: flex;
 		justify-content: center;

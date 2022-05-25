@@ -1,6 +1,6 @@
 @use "src/variables" as v;
 
-.contacts-block {
+.contacts {
 	@media screen and (max-width: 1224px) {
 		width: 100%;
 	}
@@ -42,7 +42,7 @@
 		}
 	}
 
-	.contacts-block__media {
+	.contacts__media {
 		@media screen and (max-width: 1224px) {
 			width: 80%;
 		}
@@ -63,7 +63,7 @@
 		}
 	}
 
-	.contacts-block__btn {
+	.contacts__btn {
 		@media screen and (max-width: 1224px) {
 			width: 75%;
 			margin: 8vw 0;

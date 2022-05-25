@@ -26,10 +26,10 @@ const SkillsBlock: FC = () => {
     ]
 
     return (
-        <section className="skills-block--ctr">
+        <section className="skills">
             <h1>Skills</h1>
             <h2>I work in such programs as</h2>
-            <div className="skills-block">
+            <div className="skills-items">
                 {skills.map(el => <Skill skill={el} key={el.id}/>)}
             </div>
         </section>
@@ -40,7 +40,7 @@ const Skill: FC<{ skill: ISkill }> = ({skill}) => {
     const {id, img, title, stars} = skill;
 
     return (
-        <div className="skills-block__item">
+        <div className="skills-item">
             <img src={img} alt={title}/>
             <p dangerouslySetInnerHTML={{__html: title}}></p>
             <Stars count={stars} skillId={id}/>

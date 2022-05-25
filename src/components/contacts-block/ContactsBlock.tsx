@@ -15,7 +15,7 @@ interface IContactsMedia {
 
 const ContactsBlock: FC = () => {
     return (
-        <footer className="contacts-block">
+        <footer className="contacts">
             <h1>Contacts</h1>
             <p>Want to know more or just chat?<br/>You are welcome!</p>
             <ContactsBtn/>
@@ -56,7 +56,7 @@ const ContactsMedia: FC = () => {
     ];
 
     return (
-        <div className="contacts-block__media">
+        <div className="contacts__media">
             {media.map(el => <MediaItem img={el.img} alt={el.alt} title={el.alt} href={el.href} key={el.id}/>)}
         </div>
     );
@@ -72,7 +72,7 @@ const MediaItem: FC<{ img: string, alt: string, title: string, href: string }> =
 
 const ContactsBtn: FC = () => {
     return (
-        <div className="contacts-block__btn">
+        <div className="contacts__btn">
             <p>Send message</p>
         </div>
     );

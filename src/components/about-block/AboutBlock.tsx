@@ -18,7 +18,7 @@ const AboutBlock: FC = () => {
     }, []);
 
     return (
-        <section className="about-block">
+        <section className="about">
             {isRussian ?
                 <Fragment>
                     <p onClick={handleClick} title="Сменить язык раздела на английский">Обо мне</p>

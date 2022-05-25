@@ -6,11 +6,11 @@ const Header: FC = () => {
     return (
         <header>
             <nav>
-                <HeaderItem title='Home' scrollEl='home-block--ctr'/>
-                <HeaderItem title='About me' scrollEl='about-block'/>
-                <HeaderItem title='Skills' scrollEl='skills-block--ctr'/>
-                <HeaderItem title='Portfolio' scrollEl='portfolio-block--ctr'/>
-                <HeaderItem title='Contacts' scrollEl='contacts-block'/>
+                <NavItem title='Home' scrollEl='home-block--ctr'/>
+                <NavItem title='About me' scrollEl='about-block'/>
+                <NavItem title='Skills' scrollEl='skills-block--ctr'/>
+                <NavItem title='Portfolio' scrollEl='portfolio-block--ctr'/>
+                <NavItem title='Contacts' scrollEl='contacts-block'/>
             </nav>
 
             <div>
@@ -24,13 +24,13 @@ const Header: FC = () => {
     );
 };
 
-const HeaderItem: FC<{ title: string, scrollEl: string }> = ({title, scrollEl}) => {
+const NavItem: FC<{ title: string, scrollEl: string }> = ({title, scrollEl}) => {
     const handleClick = () => {
         document.getElementsByClassName(scrollEl)[0].scrollIntoView({block: "start", behavior: "smooth"});
     }
 
     return (
-        <p className={"nav-item"} onClick={handleClick}>{title}</p>
+        <p onClick={handleClick}>{title}</p>
     );
 }
 

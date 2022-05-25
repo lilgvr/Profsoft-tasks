@@ -1,6 +1,7 @@
 import React, {FC, useState} from 'react';
 import "./header.scss";
 import photo from "../../assets/images/png/photo.png";
+import LanguageBtn from "./LanguageBtn";
 
 const Header: FC = () => {
     return (
@@ -31,26 +32,6 @@ const NavItem: FC<{ title: string, scrollEl: string }> = ({title, scrollEl}) => 
 
     return (
         <p onClick={handleClick}>{title}</p>
-    );
-}
-
-const LanguageBtn: FC = () => {
-    const [selectedRU, setSelectedRU] = useState(false);
-
-    const handleClickEN = () => {
-        setSelectedRU(false);
-    }
-
-    const handleClickRU = () => {
-        setSelectedRU(true);
-    }
-
-    return (
-        <div className="lang-btn">
-            <p className={selectedRU ? 'lang-selected' : ''} onClick={handleClickRU}>RU</p>
-            <p className="lang-line">&nbsp;|&nbsp;</p>
-            <p className={!selectedRU ? 'lang-selected' : ''} onClick={handleClickEN}>ENG</p>
-        </div>
     );
 }
 

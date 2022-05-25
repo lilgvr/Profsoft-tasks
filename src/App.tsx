@@ -8,10 +8,10 @@ import Media from "react-media";
 import HeaderMobile from "./components/header/mobile/HeaderMobile";
 
 function App() {
-    const [requestContent, setRequestContent] = useState({});
+    const [requestContent, setRequestContent] = useState(null);
 
+    const url = 'https://jsonplaceholder.typicode.com/posts';
     const fetchPost = useCallback(async () => {
-        const url = 'https://jsonplaceholder.typicode.com/posts';
         const title = 'myTitle', body = 'myBody', userId = 543;
         const params = {
             method: 'POST',
@@ -33,13 +33,17 @@ function App() {
 
         if (response) {
             setRequestContent(response);
-            console.log(`Результат запроса к \n${url}: `, response);
         }
     }, []);
 
     useEffect(() => {
-        fetchPost();
+        fetchPost().then();
     }, [fetchPost]);
+
+    useEffect(() => {
+        // Выводится дважды из-за React.StrictMode, только на этапе разработки
+        if (requestContent) console.log(`Результат запроса к \n${url}: `, requestContent);
+    }, [requestContent]);
 
     return (
         <>

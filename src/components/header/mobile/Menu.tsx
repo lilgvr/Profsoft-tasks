@@ -2,6 +2,7 @@ import React, {FC, useContext, useState} from 'react';
 import close from "../../../assets/images/svg/close.svg";
 import MenuContext from "../../../service/MenuContext";
 import "../header.scss";
+import LanguageBtn from "../LanguageBtn";
 
 const Menu: FC = () => {
     const {menuOpened, setMenuOpened} = useContext(MenuContext);
@@ -34,26 +35,6 @@ const MenuItem: FC<{ title: string, scrollEl: string, selected?: boolean }> = ({
 
     return (
         <p className={selected ? 'selected' : ''} onClick={handleClick}>{title}</p>
-    );
-}
-
-const LanguageBtn: FC = () => {
-    const [selectedRU, setSelectedRU] = useState(false);
-
-    const handleClickEN = () => {
-        setSelectedRU(false);
-    }
-
-    const handleClickRU = () => {
-        setSelectedRU(true);
-    }
-
-    return (
-        <div className="lang-btn">
-            <p className={selectedRU ? 'lang-selected' : ''} onClick={handleClickRU}>RU</p>
-            <p className="lang-line">&nbsp;|&nbsp;</p>
-            <p className={!selectedRU ? 'lang-selected' : ''} onClick={handleClickEN}>ENG</p>
-        </div>
     );
 }
 

@@ -49,22 +49,12 @@ function App() {
             }}>
                 {matches => (
                     <Fragment>
-                        {matches.desktopOrLaptop &&
-                            <Fragment>
-                                <Header/>
-                                <AboutBlock/>
-                                <SkillsBlock/>
-                                <PortfolioBlock/>
-                                <ContactsBlock/>
-                            </Fragment>}
-                        {matches.tabletOrMobile &&
-                            <Fragment>
-                                <HeaderMobile/>
-                                <AboutBlock/>
-                                <SkillsBlock/>
-                                <PortfolioBlock/>
-                                <ContactsBlock/>
-                            </Fragment>}
+                        {matches.desktopOrLaptop && <Header/>}
+                        {matches.tabletOrMobile && <HeaderMobile/>}
+                        <AboutBlock/>
+                        <SkillsBlock/>
+                        <PortfolioBlock/>
+                        <ContactsBlock/>
                     </Fragment>
                 )}
             </Media>

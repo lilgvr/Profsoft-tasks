@@ -1,7 +1,7 @@
 import React, {FC, useContext, useState} from 'react';
-import "../../home-block/home-block.scss";
 import close from "../../../assets/images/svg/close.svg";
 import MenuContext from "../../../service/MenuContext";
+import "../header.scss";
 
 const Menu: FC = () => {
     const {menuOpened, setMenuOpened} = useContext(MenuContext);
@@ -10,7 +10,7 @@ const Menu: FC = () => {
     }
 
     return (
-        <div className="header--mobile__menu">
+        <nav className="header--mobile__menu">
             <div>
                 <MenuItem title='Home' scrollEl='' selected/>
                 <img src={close} alt="Close" onClick={handleClick}/>
@@ -20,7 +20,7 @@ const Menu: FC = () => {
             <MenuItem title='Portfolio' scrollEl=''/>
             <MenuItem title='Contacts' scrollEl=''/>
             <LanguageBtn/>
-        </div>
+        </nav>
     );
 };
 

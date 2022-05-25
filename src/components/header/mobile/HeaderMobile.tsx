@@ -1,8 +1,8 @@
 import React, {FC, useState} from 'react';
 import photo from "../../../assets/images/png/photo2.png";
 import burger from "../../../assets/images/svg/burger.svg";
-import "../../home-block/home-block.scss";
 import MenuContext from "../../../service/MenuContext";
+import "../header.scss";
 import Menu from "./Menu";
 
 const HeaderMobile: FC = () => {
@@ -12,11 +12,11 @@ const HeaderMobile: FC = () => {
     }
 
     return (
-        <div className="home-block--ctr">
+        <header className="mobile">
             <div>
-                <div className="home-block__info">
-                    <p className="home-block__title">Denis<br/>Novik</p>
-                    <p className="home-block__desc">UX | UI Designer <br/> 24 years old, Minsk </p>
+                <div>
+                    <h1 className="home-block__title">Denis<br/>Novik</h1>
+                    <h2 className="home-block__desc">UX | UI Designer <br/> 24 years old, Minsk </h2>
                 </div>
 
                 <img src={burger} alt="Menu" onClick={handleClick}/>
@@ -26,7 +26,7 @@ const HeaderMobile: FC = () => {
             <MenuContext.Provider value={{menuOpened, setMenuOpened}}>
                 {menuOpened && <Menu/>}
             </MenuContext.Provider>
-        </div>
+        </header>
     );
 };
 

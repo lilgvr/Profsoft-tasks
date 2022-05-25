@@ -1,6 +1,5 @@
 import React, {Fragment, useCallback, useEffect, useState} from 'react';
 import Header from "./components/header/Header";
-import HomeBlock from "./components/home-block/HomeBlock";
 import AboutBlock from "./components/about-block/AboutBlock";
 import SkillsBlock from "./components/skills-block/SkillsBlock";
 import PortfolioBlock from "./components/portfolio-block/PortfolioBlock";
@@ -53,7 +52,6 @@ function App() {
                         {matches.desktopOrLaptop &&
                             <Fragment>
                                 <Header/>
-                                {/*<HomeBlock/>*/}
                                 <AboutBlock/>
                                 <SkillsBlock/>
                                 <PortfolioBlock/>

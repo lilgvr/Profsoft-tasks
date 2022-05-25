@@ -1,11 +1,11 @@
 import React, {FC, useState} from 'react';
 import photo from "../../../assets/images/png/photo2.png";
 import burger from "../../../assets/images/svg/burger.svg";
-import "../home-block.scss";
+import "../../home-block/home-block.scss";
 import MenuContext from "../../../service/MenuContext";
 import Menu from "./Menu";
 
-const HomeBlockMobile: FC = () => {
+const HeaderMobile: FC = () => {
     const [menuOpened, setMenuOpened] = useState(false);
     const handleClick = () => {
         setMenuOpened(!menuOpened);
@@ -30,4 +30,4 @@ const HomeBlockMobile: FC = () => {
     );
 };
 
-export default HomeBlockMobile;
+export default HeaderMobile;

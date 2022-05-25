@@ -46,7 +46,7 @@ const LanguageBtn: FC = () => {
     }
 
     return (
-        <div className="home-block__lang">
+        <div className="header__lang">
             <p className={selectedRU ? 'lang-selected' : ''} onClick={handleClickRU}>RU</p>
             <p className="lang-line">&nbsp;|&nbsp;</p>
             <p className={!selectedRU ? 'lang-selected' : ''} onClick={handleClickEN}>ENG</p>

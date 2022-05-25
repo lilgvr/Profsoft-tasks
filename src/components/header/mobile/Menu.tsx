@@ -1,5 +1,5 @@
 import React, {FC, useContext, useState} from 'react';
-import "../home-block.scss";
+import "../../home-block/home-block.scss";
 import close from "../../../assets/images/svg/close.svg";
 import MenuContext from "../../../service/MenuContext";
 
@@ -10,7 +10,7 @@ const Menu: FC = () => {
     }
 
     return (
-        <div className="home-block--menu">
+        <div className="header--mobile__menu">
             <div>
                 <MenuItem title='Home' scrollEl='' selected/>
                 <img src={close} alt="Close" onClick={handleClick}/>
@@ -49,7 +49,7 @@ const LanguageBtn: FC = () => {
     }
 
     return (
-        <div className="home-block__lang">
+        <div className="header__lang">
             <p className={selectedRU ? 'lang-selected' : ''} onClick={handleClickRU}>RU</p>
             <p className="lang-line">&nbsp;|&nbsp;</p>
             <p className={!selectedRU ? 'lang-selected' : ''} onClick={handleClickEN}>ENG</p>

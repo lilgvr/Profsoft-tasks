@@ -6,7 +6,7 @@ import SkillsBlock from "./components/skills-block/SkillsBlock";
 import PortfolioBlock from "./components/portfolio-block/PortfolioBlock";
 import ContactsBlock from "./components/contacts-block/ContactsBlock";
 import Media from "react-media";
-import HomeBlockMobile from "./components/home-block/mobile/HomeBlockMobile";
+import HeaderMobile from "./components/header/mobile/HeaderMobile";
 
 function App() {
     const [requestContent, setRequestContent] = useState({});
@@ -61,7 +61,7 @@ function App() {
                             </Fragment>}
                         {matches.tabletOrMobile &&
                             <Fragment>
-                                <HomeBlockMobile/>
+                                <HeaderMobile/>
                                 <AboutBlock/>
                                 <SkillsBlock/>
                                 <PortfolioBlock/>

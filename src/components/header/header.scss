@@ -83,33 +83,6 @@ header {
 		}
 	}
 
-	.header__lang {
-		writing-mode: vertical-rl;
-		transform: rotate(180deg);
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		flex-direction: row;
-		color: v.$secondary-color;
-		font-size: 1.25vw;
-
-		p {
-			margin: 0;
-		}
-
-		p:not(.lang-line):hover {
-			cursor: pointer;
-		}
-
-		.lang-selected {
-			color: v.$primary-color;
-		}
-
-		.lang-line {
-			color: v.$primary-color;
-		}
-	}
-
 	img {
 		@media screen and (max-width: 1224px) {
 			width: 80%;
@@ -144,165 +117,103 @@ header {
 	}
 }
 
-.header--mobile__menu {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 10%;
-	border: 1px solid red;
-	left: 10%;
-	background-color: #ffffff;
-	font-family: "Gilroy Bold", sans-serif;
-
+.header__lang {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
 	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: column;
-
-	div {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-direction: row;
-		width: 100%;
-	}
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: row;
+	color: v.$secondary-color;
+	font-size: 1.25vw;
 
 	p {
-		font-size: 9vw;
-		color: v.$secondary-color;
-		margin: 6vw 0;
-
-		&.selected {
-			color: v.$primary-color;
-		}
-
-		&.lang-selected {
-			color: v.$primary-color;
-		}
-
-		&.lang-line {
-			color: v.$primary-color;
-		}
+		margin: 0;
 	}
 
-	.header__lang {
-		writing-mode: vertical-rl;
-		transform: rotate(180deg) translate(-11vw, 0);
-		transform-origin: bottom;
-		width: 40%;
-		align-self: flex-end;
+	p:not(.lang-line):hover {
+		cursor: pointer;
+	}
 
-		p {
-			margin: 0;
-		}
+	.lang-selected {
+		color: v.$primary-color;
+	}
+
+	.lang-line {
+		color: v.$primary-color;
 	}
 }
 
-// old
-
 .mobile {
-	width: v.$block-width;
-	height: auto;
-	font-family: "Gilroy Bold", sans-serif;
-	user-select: none;
+	height: 100%;
 
 	& > div {
 		flex-direction: row;
 	}
 
-	& > div > div {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-direction: row;
-
-		@media screen and (max-width: 1224px) {
-			width: 100%;
-			flex-direction: column;
-		}
-
-		h1 {
-			font-size: 3vw;
-			word-wrap: break-word;
-			width: fit-content;
-
-			@media screen and (max-width: 1224px) {
-				font-size: 12.5vw;
-				align-self: flex-start;
-				margin: 10% 0 5% 0;
-			}
-		}
-
-		h2 {
-			font-family: "Gilroy Medium", sans-serif;
-			font-size: 1.25vw;
-			align-self: flex-end;
-			margin: 0 4% 5% 0;
-
-			@media screen and (max-width: 1224px) {
-				font-size: 4.8vw;
-				align-self: flex-start;
-				margin: 0 0 15% 0;
-			}
-		}
-	}
-
-	.header__lang {
-		writing-mode: vertical-rl;
-		transform: rotate(180deg);
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		flex-direction: row;
-		color: v.$secondary-color;
-		font-size: 1.25vw;
-
-		p {
-			margin: 0;
-		}
-
-		p:not(.lang-line):hover {
-			cursor: pointer;
-		}
-
-		.lang-selected {
-			color: v.$primary-color;
-		}
-
-		.lang-line {
-			color: v.$primary-color;
-		}
-	}
-
-	img {
-		@media screen and (max-width: 1224px) {
-			width: 80%;
-		}
-
-		margin-bottom: 5%;
-	}
-
-	@media screen and (max-width: 1224px) {
+	.menu {
+		position: fixed;
+		z-index: 100;
 		width: 100%;
+		height: 100%;
+		inset: 0;
+		overflow-y: hidden;
+		background-color: #ffffff;
+		font-family: "Gilroy Bold", sans-serif;
+
 		display: flex;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
 		flex-direction: column;
 
-		& > div {
-			width: 80%;
-			height: 80%;
-			margin-top: 10%;
+		$width: 90%;
+
+		& > p {
+			margin: 0 0 0 10%;
+			width: $width;
+		}
+
+		div {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			flex-direction: row;
+			width: $width;
 
 			img {
 				height: 25px;
 				width: auto;
-				align-self: flex-start;
-				justify-self: flex-end;
-				margin-top: 15%;
+				margin: 0;
+			}
+		}
+
+		p {
+			font-size: 9vw;
+			color: v.$secondary-color;
+			margin: 0;
+
+			&.selected {
+				color: v.$primary-color;
+			}
+
+			&.lang-selected {
+				color: v.$primary-color;
+			}
+
+			&.lang-line {
+				color: v.$primary-color;
+			}
+		}
+
+		.header__lang {
+			writing-mode: vertical-rl;
+			transform: translate(11vw, 5vw);
+			transform-origin: bottom;
+			width: 40%;
+			align-self: flex-end;
+
+			p {
+				margin: 0;
 			}
 		}
 	}

@@ -10,15 +10,15 @@ const Menu: FC = () => {
     }
 
     return (
-        <nav className="header--mobile__menu">
+        <nav className="menu">
             <div>
-                <MenuItem title='Home' scrollEl='' selected/>
+                <MenuItem title='Home' scrollEl='header__info' selected/>
                 <img src={close} alt="Close" onClick={handleClick}/>
             </div>
-            <MenuItem title='About me' scrollEl=''/>
-            <MenuItem title='Skills' scrollEl=''/>
-            <MenuItem title='Portfolio' scrollEl=''/>
-            <MenuItem title='Contacts' scrollEl=''/>
+            <MenuItem title='About me' scrollEl='about'/>
+            <MenuItem title='Skills' scrollEl='skills'/>
+            <MenuItem title='Portfolio' scrollEl='portfolio'/>
+            <MenuItem title='Contacts' scrollEl='contacts'/>
             <LanguageBtn/>
         </nav>
     );

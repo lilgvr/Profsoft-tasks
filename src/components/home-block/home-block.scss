@@ -105,9 +105,13 @@
 }
 
 .home-block--menu {
-	width: 80%;
-	height: 90%;
-	margin: 10% 0 0 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 10%;
+	border: 1px solid red;
+	left: 10%;
+	background-color: #ffffff;
 	font-family: "Gilroy Bold", sans-serif;
 
 	display: flex;
@@ -131,9 +135,11 @@
 		&.selected {
 			color: v.$primary-color;
 		}
+
 		&.lang-selected {
 			color: v.$primary-color;
 		}
+
 		&.lang-line {
 			color: v.$primary-color;
 		}

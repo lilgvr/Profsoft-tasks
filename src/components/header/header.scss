@@ -19,7 +19,7 @@ header {
 		border-bottom: .125vw solid v.$secondary-color;
 
 		&:hover {
-			.nav-item:first-of-type {
+			p:first-of-type {
 				color: v.$secondary-color;
 
 				&:hover {

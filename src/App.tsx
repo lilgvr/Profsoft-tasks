@@ -7,6 +7,8 @@ import ContactsBlock from "./components/contacts-block/ContactsBlock";
 import Media from "react-media";
 import HeaderMobile from "./components/header/mobile/HeaderMobile";
 
+let log = console.log;
+
 function App() {
     const [requestContent, setRequestContent] = useState(null);
 
@@ -41,8 +43,7 @@ function App() {
     }, [fetchPost]);
 
     useEffect(() => {
-        // Выводится дважды из-за React.StrictMode, только на этапе разработки
-        if (requestContent) console.log(`Результат запроса к \n${url}: `, requestContent);
+        if (requestContent) log(`Результат запроса к \n${url}: `, requestContent);
     }, [requestContent]);
 
     return (

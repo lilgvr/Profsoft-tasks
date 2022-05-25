@@ -6,14 +6,14 @@ const Header: FC = () => {
     return (
         <header>
             <nav>
-                <NavItem title='Home' scrollEl='home-block--ctr'/>
-                <NavItem title='About me' scrollEl='about-block'/>
-                <NavItem title='Skills' scrollEl='skills-block--ctr'/>
-                <NavItem title='Portfolio' scrollEl='portfolio-block--ctr'/>
-                <NavItem title='Contacts' scrollEl='contacts-block'/>
+                <NavItem title='Home' scrollEl='header__info'/>
+                <NavItem title='About me' scrollEl='about'/>
+                <NavItem title='Skills' scrollEl='skills'/>
+                <NavItem title='Portfolio' scrollEl='portfolio'/>
+                <NavItem title='Contacts' scrollEl='contacts'/>
             </nav>
 
-            <div>
+            <div className="header__info">
                 <h1>Denis<br/>Novik</h1>
                 <h2>UX | UI Designer <br/> 24 years old, Minsk </h2>
                 <LanguageBtn/>

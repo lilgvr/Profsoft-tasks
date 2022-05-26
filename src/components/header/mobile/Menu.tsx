@@ -1,4 +1,4 @@
-import React, {FC, useContext} from 'react';
+import React, {FC, useContext, useEffect, useRef} from 'react';
 import close from "../../../assets/images/svg/close.svg";
 import MenuContext from "../../../service/MenuContext";
 import "../header.scss";
@@ -11,8 +11,23 @@ const Menu: FC = () => {
         changeMenuState(menuOpened, setMenuOpened);
     }
 
+    const navRef = useRef<HTMLElement>(document.createElement('nav'));
+
+    useEffect(() => {
+        const current = navRef.current;
+
+        const timeout = setTimeout(() => {
+            current.classList.add('visible');
+        }, 10);
+
+        return () => {
+            current.classList.remove('visible');
+            clearTimeout(timeout);
+        }
+    }, []);
+
     return (
-        <nav className="menu">
+        <nav className="menu" ref={navRef}>
             <div>
                 <MenuItem title='Home' scrollEl='header__info' selected/>
                 <img src={close} alt="Close" onClick={handleClick}/>

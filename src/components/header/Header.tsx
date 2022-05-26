@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import "./header.scss";
 import photo from "../../assets/images/png/photo.png";
 import LanguageBtn from "./LanguageBtn";

@@ -3,11 +3,12 @@ import close from "../../../assets/images/svg/close.svg";
 import MenuContext from "../../../service/MenuContext";
 import "../header.scss";
 import LanguageBtn from "../LanguageBtn";
+import {changeMenuState} from "../../../service/functions";
 
 const Menu: FC = () => {
     const {menuOpened, setMenuOpened} = useContext(MenuContext);
     const handleClick = () => {
-        setMenuOpened(!menuOpened);
+        changeMenuState(menuOpened, setMenuOpened);
     }
 
     return (
@@ -29,7 +30,7 @@ const MenuItem: FC<{ title: string, scrollEl: string, selected?: boolean }> = ({
     const {menuOpened, setMenuOpened} = useContext(MenuContext);
 
     const handleClick = () => {
-        setMenuOpened(!menuOpened);
+        changeMenuState(menuOpened, setMenuOpened);
         document.getElementsByClassName(scrollEl)[0].scrollIntoView({block: "start", behavior: "smooth"});
     }
 

@@ -4,11 +4,12 @@ import burger from "../../../assets/images/svg/burger.svg";
 import MenuContext from "../../../service/MenuContext";
 import "../header.scss";
 import Menu from "./Menu";
+import {changeMenuState} from "../../../service/functions";
 
 const HeaderMobile: FC = () => {
     const [menuOpened, setMenuOpened] = useState(false);
     const handleClick = () => {
-        setMenuOpened(!menuOpened);
+        changeMenuState(menuOpened, setMenuOpened);
     }
 
     return (

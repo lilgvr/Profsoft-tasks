@@ -19,7 +19,7 @@
 	h1 {
 		text-align: center;
 		font-weight: 700;
-		margin: 10% 0;
+		margin: 10% 0 0 0;
 		font-size: 2vw;
 		user-select: none;
 		@media screen and (max-width: 1224px) {
@@ -30,7 +30,7 @@
 	h2 {
 		text-align: center;
 		font-size: 1.25vw;
-		margin: 10% 0;
+		margin: 5% 0 0 0;
 		@media screen and (max-width: 1224px) {
 			font-size: 4.8vw;
 			margin: 10vw 0;
@@ -45,12 +45,13 @@
 		flex-direction: column;
 		height: 50%;
 
-		p {
+		figcaption {
 			font-size: .75vw;
 			color: v.$secondary-color;
 			word-wrap: break-word;
 			width: 40%;
 			text-align: center;
+			margin: 1vw 0;
 
 			@media screen and (max-width: 1224px) {
 				font-size: 3.75vw;

@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useCallback, useEffect, useMemo} from 'react';
+import React, {FC, Fragment, ReactNode, useCallback, useEffect, useMemo} from 'react';
 import "./skills-block.scss";
 import ae from "src/assets/images/svg/ae.svg";
 import ai from "src/assets/images/svg/ai.svg";
@@ -19,9 +19,9 @@ const SkillsBlock: FC = () => {
     const idGenerator = infiniteGenerator();
 
     const skills: ISkill[] = [
-        {id: idGenerator.next().value, img: ps, title: `Adobe<br/>Photoshop`, stars: 4},
-        {id: idGenerator.next().value, img: ai, title: `Adobe<br/>Illustrator`, stars: 3},
-        {id: idGenerator.next().value, img: ae, title: `Adobe<br/>After Effects`, stars: 4},
+        {id: idGenerator.next().value, img: ps, title: `Adobe\nPhotoshop`, stars: 4},
+        {id: idGenerator.next().value, img: ai, title: `Adobe\nIllustrator`, stars: 3},
+        {id: idGenerator.next().value, img: ae, title: `Adobe\nAfter Effects`, stars: 4},
         {id: idGenerator.next().value, img: figma, title: "Figma", stars: 4},
     ]
 
@@ -40,11 +40,20 @@ const Skill: FC<{ skill: ISkill }> = ({skill}) => {
     const {id, img, title, stars} = skill;
 
     return (
-        <div className="skills-item">
+        <figure className="skills-item">
             <img src={img} alt={title}/>
-            <p dangerouslySetInnerHTML={{__html: title}}></p>
+
+            <figcaption>
+                {title.split('\n').map((value, index) => {
+                    return <Fragment key={(index + 1) * 2}>
+                        {value}
+                        <br/>
+                    </Fragment>
+                })}
+            </figcaption>
+
             <Stars count={stars} skillId={id}/>
-        </div>
+        </figure>
     );
 }
 

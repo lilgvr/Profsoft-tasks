@@ -73,7 +73,7 @@ const MediaItem: FC<{ img: string, alt: string, title: string, href: string }> =
 const ContactsBtn: FC = () => {
     return (
         <div className="contacts__btn">
-            <p>Send message</p>
+            <span>Send message</span>
         </div>
     );
 }

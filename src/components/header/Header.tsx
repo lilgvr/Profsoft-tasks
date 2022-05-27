@@ -16,7 +16,7 @@ const Header: FC = () => {
 
             <div className="header__info">
                 <h1>Denis<br/>Novik</h1>
-                <h2>UX | UI Designer <br/> 24 years old, Minsk </h2>
+                <h2>UX | UI Designer<br/>24 years old, Minsk</h2>
                 <LanguageBtn/>
             </div>
 

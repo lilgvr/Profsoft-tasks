@@ -20,10 +20,7 @@ const Menu: FC = () => {
             current.classList.add('visible');
         }, 10);
 
-        return () => {
-            current.classList.remove('visible');
-            clearTimeout(timeout);
-        }
+        return () => clearTimeout(timeout);
     }, []);
 
     return (

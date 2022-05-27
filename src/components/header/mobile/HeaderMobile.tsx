@@ -9,10 +9,7 @@ import {changeMenuState} from "../../../service/functions";
 const HeaderMobile: FC = () => {
     const [menuOpened, setMenuOpened] = useState(false);
     const handleClick = () => {
-        if (menuOpened) setTimeout(() => {
-            changeMenuState(menuOpened, setMenuOpened);
-        }, 1000);
-        else changeMenuState(menuOpened, setMenuOpened);
+        changeMenuState(menuOpened, setMenuOpened);
     }
 
     return (

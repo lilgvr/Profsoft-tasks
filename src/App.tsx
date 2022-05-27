@@ -43,7 +43,7 @@ function App() {
     }, [fetchPost]);
 
     useEffect(() => {
-        if (requestContent) log(`Результат запроса к \n${url}: `, requestContent);
+        if (requestContent) log(`Результат запроса к ${url}: `, requestContent);
     }, [requestContent]);
 
     return (

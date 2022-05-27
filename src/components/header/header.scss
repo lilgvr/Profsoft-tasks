@@ -19,7 +19,7 @@ header {
 		border-bottom: 2px solid v.$secondary-color;
 
 		&:hover {
-			p:first-of-type {
+			span:first-of-type {
 				color: v.$secondary-color;
 
 				&:hover {
@@ -28,7 +28,7 @@ header {
 			}
 		}
 
-		p {
+		span {
 			font-size: 1.25vw;
 			transition: color .1s linear;
 
@@ -117,33 +117,7 @@ header {
 	}
 }
 
-.lang-btn {
-	writing-mode: vertical-rl;
-	transform: rotate(180deg);
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	flex-direction: row;
-	color: v.$secondary-color;
-	font-size: 1.25vw;
-	user-select: none;
 
-	p {
-		margin: 0;
-	}
-
-	p:not(.lang-line):hover {
-		cursor: pointer;
-	}
-
-	.lang-selected {
-		color: v.$primary-color;
-	}
-
-	.lang-line {
-		color: v.$primary-color;
-	}
-}
 
 .mobile {
 	height: 100%;
@@ -175,7 +149,7 @@ header {
 
 		$width: 80%;
 
-		& > p {
+		& > span {
 			margin: 0 0 0 10%;
 			width: $width;
 		}
@@ -194,7 +168,7 @@ header {
 			}
 		}
 
-		p {
+		span {
 			font-size: 9vw;
 			user-select: none;
 			color: v.$secondary-color;
@@ -220,7 +194,7 @@ header {
 			width: 40%;
 			align-self: flex-end;
 
-			p {
+			span {
 				margin: 0;
 			}
 		}

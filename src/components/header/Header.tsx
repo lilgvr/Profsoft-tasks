@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import "./header.scss";
 import photo from "../../assets/images/png/photo.png";
-import LanguageBtn from "./LanguageBtn";
+import LanguageBtn from "./language-btn/LanguageBtn";
 
 const Header: FC = () => {
     return (
@@ -31,7 +31,7 @@ const NavItem: FC<{ title: string, scrollEl: string }> = ({title, scrollEl}) => 
     }
 
     return (
-        <p onClick={handleClick}>{title}</p>
+        <span onClick={handleClick}>{title}</span>
     );
 }
 

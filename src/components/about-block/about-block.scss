@@ -12,7 +12,7 @@
 	align-items: center;
 	flex-direction: column;
 
-	p:first-of-type {
+	h1 {
 		font-weight: 700;
 		font-size: 2vw;
 		user-select: none;
@@ -37,7 +37,7 @@
 		}
 	}
 
-	p:last-of-type{
+	span{
 		color: v.$secondary-color;
 		font-size: 1vw;
 		user-select: none;

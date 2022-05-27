@@ -2,7 +2,7 @@ import React, {FC, useContext, useEffect, useRef} from 'react';
 import close from "../../../assets/images/svg/close.svg";
 import MenuContext from "../../../service/MenuContext";
 import "../header.scss";
-import LanguageBtn from "../LanguageBtn";
+import LanguageBtn from "../language-btn/LanguageBtn";
 import {changeMenuState} from "../../../service/functions";
 
 const Menu: FC = () => {
@@ -47,7 +47,7 @@ const MenuItem: FC<{ title: string, scrollEl: string, selected?: boolean }> = ({
     }
 
     return (
-        <p className={selected ? 'selected' : ''} onClick={handleClick}>{title}</p>
+        <span className={selected ? 'selected' : ''} onClick={handleClick}>{title}</span>
     );
 }
 

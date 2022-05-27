@@ -30,10 +30,10 @@ const PortfolioBlock: FC = () => {
 
 const PortfolioItem: FC<{ img: string, title: string }> = ({img, title}) => {
     return (
-        <div>
+        <figure>
             <img src={img} alt={title}/>
-            <p>{title}</p>
-        </div>
+            <figcaption>{title}</figcaption>
+        </figure>
     );
 }
 

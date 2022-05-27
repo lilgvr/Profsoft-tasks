@@ -12,7 +12,6 @@ let log = console.log;
 function App() {
     const [requestContent, setRequestContent] = useState(null);
 
-
     const url = 'https://jsonplaceholder.typicode.com/posts';
     const fetchPost = useCallback(async () => {
         const title = 'myTitle', body = 'myBody', userId = 543;

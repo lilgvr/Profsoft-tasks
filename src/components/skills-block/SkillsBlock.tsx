@@ -44,11 +44,17 @@ const Skill: FC<{ skill: ISkill }> = ({skill}) => {
             <img src={img} alt={title}/>
 
             <figcaption>
-                {title.split('\n').map((value, index) => {
-                    return <Fragment key={(index + 1) * 2}>
-                        {value}
-                        <br/>
-                    </Fragment>
+                {title.split('\n').map((value, index, array) => {
+                    return (index !== array.length - 1) ? (
+                        <Fragment key={(index + 1) * 2}>
+                            {value}
+                            <br/>
+                        </Fragment>
+                    ) : (
+                        <Fragment key={(index + 1) * 2}>
+                            {value}
+                        </Fragment>
+                    )
                 })}
             </figcaption>
 

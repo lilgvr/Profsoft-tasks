@@ -1,0 +1,92 @@
+@use "src/variables" as v;
+
+.skills {
+	width: v.$block-width;
+
+	.skills-items {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: row;
+		margin: 10% 0;
+
+		@media screen and (max-width: 1224px) {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+
+	h1 {
+		text-align: center;
+		font-weight: 700;
+		margin: 10% 0 0 0;
+		font-size: 2vw;
+		user-select: none;
+		@media screen and (max-width: 1224px) {
+			font-size: 9vw;
+		}
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 1.25vw;
+		margin: 5% 0 0 0;
+		@media screen and (max-width: 1224px) {
+			font-size: 4.8vw;
+			margin: 10vw 0;
+		}
+	}
+
+	.skills-item {
+		font-weight: 700;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		height: 50%;
+		margin: 0;
+
+		figcaption {
+			font-size: 1vw;
+			color: v.$secondary-color;
+			word-wrap: break-word;
+			width: 60%;
+			height: 4em;
+			text-align: center;
+			margin: 2vw 0 0 0;
+
+			@media screen and (max-width: 1224px) {
+				font-size: 3.75vw;
+				width: 80%;
+			}
+		}
+
+		.stars-ctr {
+
+		}
+
+		.star {
+			margin: 1vw .5vw;
+
+			@media screen and (max-width: 1224px) {
+				height: 5vw;
+				margin: 6vw 2vw;
+			}
+		}
+
+		& > img {
+			height: 100px;
+			width: auto;
+
+			@media screen and (max-width: 1224px) {
+				height: 24vw;
+				margin: 4vw 0;
+			}
+
+			@media screen and (max-width: 1900px) {
+				height: 96px;
+				margin: 2vw;
+			}
+		}
+	}
+}

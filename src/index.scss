@@ -1,0 +1,52 @@
+@use './variables' as v;
+
+@font-face {
+	font-family: 'Gilroy Bold';
+	src: local('Gilroy Bold'),
+	url('assets/fonts/Gilroy/Bold/Gilroy-Bold.woff2') format('woff2'),
+	url('assets/fonts/Gilroy/Bold/Gilroy-Bold.woff') format('woff'),
+	url('assets/fonts/Gilroy/Bold/Gilroy-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy Medium';
+	src: local('Gilroy Medium'),
+	url('assets/fonts/Gilroy/Medium/Gilroy-Medium.woff2') format('woff2'),
+	url('assets/fonts/Gilroy/Medium/Gilroy-Medium.woff') format('woff'),
+	url('assets/fonts/Gilroy/Medium/Gilroy-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	body {
+		scroll-behavior: smooth;
+		width: 100%;
+		margin: 0;
+		font-family: "Gilroy Medium", sans-serif;
+		color: v.$primary-color;
+		-webkit-tap-highlight-color: transparent;
+
+
+		&.no-scroll {
+			overflow: hidden;
+		}
+	}
+
+	#root, main {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	main {
+		width: 100%;
+	}
+}

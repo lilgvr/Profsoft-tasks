@@ -1,0 +1,49 @@
+@use 'src/variables' as v;
+
+.portfolio {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	background-color: v.$background-color;
+
+	& > h1 {
+		font-weight: 700;
+		font-size: 2vw;
+		user-select: none;
+		margin-top: 7%;
+
+		@media screen and (max-width: 1224px) {
+			font-size: 9vw;
+		}
+
+		@media screen and (min-width: 1824px) {
+			font-size: 2vw;
+		}
+	}
+
+	figure {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 2vw 0;
+
+		figcaption {
+			text-decoration: underline;
+			margin: 2vw 0;
+
+			@media screen and (max-width: 1224px) {
+				font-size: 4.8vw;
+				margin: 4vw 0 12vw 0;
+			}
+		}
+
+		@media screen and (max-width: 1224px) {
+			img {
+				width: 80%;
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+@use "src/variables" as v;
+
+.about {
+	height: auto;
+	margin-top: 5vw;
+	padding: 5vw 0;
+	width: 100%;
+	position: relative;
+	background-color: v.$background-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h1 {
+		font-weight: 700;
+		font-size: 2vw;
+		user-select: none;
+
+		@media screen and (max-width: 1224px) {
+			font-size: 9vw;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	p {
+		width: 50%;
+		text-align: center;
+		font-size: 1.25vw;
+
+		@media screen and (max-width: 1224px) {
+			font-size: 4.8vw;
+			width: 80%;
+		}
+	}
+
+	span{
+		color: v.$secondary-color;
+		font-size: 1vw;
+		user-select: none;
+
+		@media screen and (max-width: 1224px) {
+			font-size: 4.8vw;
+		}
+	}
+}

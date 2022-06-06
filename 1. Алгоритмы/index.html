@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовые задания</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>1. Алгоритмы</h1>
+
+<h2>1.1 Сортировка массива</h2>
+<p>Исходный массив: <span id="arr"></span></p>
+<p>Массив, отсортированный по возрастанию: <span id="asc"></span></p>
+<p>Массив, отсортированный по убыванию: <span id="desc"></span></p>
+
+<h2>1.2 Поиск вершин</h2>
+<div>
+    <label for="firstSel">Первая вершина: </label>
+    <select id="firstSel" onchange="getPath()"></select>
+    <label for="secondSel">Вторая вершина: </label>
+    <select id="secondSel" onchange="getPath()"></select>
+
+    <span id="pathResult"></span>
+</div>
+
+<h2>1.3 Поиск числа в массиве из задания 1.1</h2>
+<label for="numInput">Число: </label>
+<input type="number" id="numInput" oninput="doSearch()">
+<span id="searchResult"></span>
+
+<script src="script.js"></script>
+</body>
+</html>

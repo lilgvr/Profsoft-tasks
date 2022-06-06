@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+h2{
+    margin-top: 2vw;
+}
+
+*{
+    margin-left: 1vw;
+}
+
+span {
+    font-weight: bold;
+}

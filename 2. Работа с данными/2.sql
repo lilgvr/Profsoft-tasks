@@ -1,0 +1,1 @@
+INSERT INTO Employees(restaurantId, positionId, firstname, lastname, phone) VALUES(1303, 4, 'John', 'Doe', '+7(999)111-22-33') 
